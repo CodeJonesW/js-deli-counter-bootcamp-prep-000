@@ -1,6 +1,7 @@
-function takeANumber (peopleInLine, name) {
-  peopleInLine.push(name);
-  return `Welcome, ${name}. You are number ${peopleInLine.length} in line.`;
+let ticketNumber = 0;
+function takeANumber (peopleInLine) {
+  ticketNumber++;
+  peopleInLine.push(ticketNumber);
 }
 function nowServing (peopleInLine) {
   if (peopleInLine.length === 0) {
@@ -21,3 +22,5 @@ function currentLine(peopleInLine) {
   return 'The line is currently empty.';
   }
  }
+ 
+ // array.join() look into for alternate solution 
